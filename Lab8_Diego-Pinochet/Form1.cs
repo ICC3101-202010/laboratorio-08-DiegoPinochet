@@ -32,6 +32,16 @@ namespace Lab8_Diego_Pinochet
             DisplayListPanel.BringToFront();
 
         }
+        private void AddLocalGoBack_Click(object sender, EventArgs e)
+        {
+            AddLocalOwnerNameTextBox.Clear();
+            AddLocalAttentionHourTextbox.Clear();
+            AddLocalIdentNumTextbox.Clear();
+            AddLocalInvalidCredentialsTextBox.Clear();
+            InitializePanel.BringToFront();
+            AddLocalStoreCatTextBox.Clear();
+            AddLocalNumSalaTextBox.Clear();
+        }
         private void AddLocalChooseButton_Click(object sender, EventArgs e)
         {
             string localType = AddLocalDomainUp.Text;
@@ -111,7 +121,7 @@ namespace Lab8_Diego_Pinochet
         private void DisplayListGoBackButton_Click(object sender, EventArgs e)
         {
             InitializePanel.BringToFront();
-            DisplayListLocalsTextbox.Clear();
+            DisplayListLocalsTextBox.Clear();
         }
 
         //<<METODOS INTERNOS>>
@@ -174,7 +184,6 @@ namespace Lab8_Diego_Pinochet
                                 {
                                     InfoPanelDisplayInfoTextBox.Clear();
                                     InfoPanelDisplayInfoTextBox.AppendText(tienda.ToString());
-                                    DisplayListLocalsTextbox.AppendText(tienda.ToString());
                                     identTotales.Add(tienda.IdentifierNum);
                                 }
                             }        
@@ -188,7 +197,6 @@ namespace Lab8_Diego_Pinochet
                                 {
                                     InfoPanelDisplayInfoTextBox.Clear();
                                     InfoPanelDisplayInfoTextBox.AppendText(cine.ToString());
-                                    DisplayListLocalsTextbox.AppendText(cine.ToString());
                                     identTotales.Add(cine.IdentifierNum);
                                 }
                             }
@@ -203,7 +211,6 @@ namespace Lab8_Diego_Pinochet
                                 {
                                     InfoPanelDisplayInfoTextBox.Clear();
                                     InfoPanelDisplayInfoTextBox.AppendText(restaurant.ToString());
-                                    DisplayListLocalsTextbox.AppendText(restaurant.ToString());
                                     identTotales.Add(restaurant.IdentifierNum);
                                 }
                             }
@@ -222,7 +229,7 @@ namespace Lab8_Diego_Pinochet
         }
         public void InitializeAllLocalsButton_Click()
         {
-            DisplayListLocalsTextbox.Clear();
+            DisplayListLocalsTextBox.Clear();
             List<Locales> tiendasTotales = new List<Locales>();
             List<Locales> cineTotales = new List<Locales>();
             List<Locales> restTotales = new List<Locales>();
@@ -239,8 +246,7 @@ namespace Lab8_Diego_Pinochet
                             tiendasTotales.Add(local);
                             foreach (Tienda tienda in tiendasTotales)
                             {
-                                var += tienda.ToString() + "\n";
-                                
+                                var += tienda.ToString() + "\r\n";
                             }
                         }
                         else if (local.LocalType == "Cine")
@@ -248,7 +254,7 @@ namespace Lab8_Diego_Pinochet
                             cineTotales.Add(local);
                             foreach (Cine cine in cineTotales)
                             {
-                                var += cine.ToString() + "\n";
+                                var += cine.ToString() + "\r\n";
                             }
 
                         }
@@ -257,14 +263,16 @@ namespace Lab8_Diego_Pinochet
                             restTotales.Add(local);
                             foreach (Restaurant restaurant in restTotales)
                             {
-                                var += restaurant.ToString() + "\n";
+                                var += restaurant.ToString() + "\r\n";
                             }
 
                         }
                     }
                 }
-                DisplayListLocalsTextbox.Text = var;
+                DisplayListLocalsTextBox.AppendText(var);
             }
         }
+
+        
     }
 }

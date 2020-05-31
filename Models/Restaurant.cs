@@ -25,7 +25,7 @@ namespace Models
 
         public override string ToString()
         {
-            return "Restaurante: " + " Dueño: " + ownerName + ", Número identificador: " + IdentifierNum + "\n Horario: " + attentionHours + ", Mesas VIP: " + vipTables.ToString() + ". ";
+            return "Restaurante:\r\n" + "Dueño: " + ownerName + ", Número identificador: " + IdentifierNum + ", Horario: " + attentionHours + ", Mesas VIP: " + vipTables.ToString() + ". ";
         }
     }
 }

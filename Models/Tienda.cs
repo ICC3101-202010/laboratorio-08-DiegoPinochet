@@ -25,7 +25,7 @@ namespace Models
         }
         public override string ToString()
         {
-            return localType + ": Dueño: " + ownerName + ", Número identificador: " + IdentifierNum + " Horario: " + attentionHours + ", Categorias " + category + ". ";
+            return localType + ":\r\n" + "Dueño: " + ownerName + ", Número identificador: " + IdentifierNum + " Horario: " + attentionHours + ", Categorias " + category + ". ";
         }
 
     }

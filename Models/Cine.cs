@@ -25,7 +25,7 @@ namespace Models
         }
         public override string ToString()
         {
-            return localType + ": Dueño: " + ownerName + ", Número identificador: " + IdentifierNum + "\n Horario: " + attentionHours + ", Cantidad de salas: " + numSala.ToString() + ". ";
+            return localType + ":\r\n" + "Dueño: " + ownerName + ", Número identificador: " + IdentifierNum + "\n Horario: " + attentionHours + ", Cantidad de salas: " + numSala.ToString() + ". ";
         }
     }
 }

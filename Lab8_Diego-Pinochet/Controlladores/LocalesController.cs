@@ -53,7 +53,7 @@ namespace Lab8_Diego_Pinochet.Controlladores
                 {
                     if (e.IdentNumText == local.IdentifierNum)
                     {
-                        description = "ERROR[!] No se pudo crear la restaurant";
+                        description = "ERROR[!] No se pudo crear el local";
                         return description;
 
                     }
@@ -71,7 +71,7 @@ namespace Lab8_Diego_Pinochet.Controlladores
                 }
                 else
                 {
-                    description = "ERROR[!] No se pudo crear la restaurant";
+                    description = "ERROR[!] No se pudo crear el restaurant";
 
                 }
             }
@@ -87,7 +87,7 @@ namespace Lab8_Diego_Pinochet.Controlladores
                 }
                 else
                 {
-                    description = "ERROR[!] No se pudo crear la cine";
+                    description = "ERROR[!] No se pudo crear el cine";
 
                 }
             }
